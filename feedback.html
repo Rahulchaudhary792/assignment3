@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, iniKal-scale=1.0" />
-    <Ktle>Feedback Form</Ktle>
-  </head>
-  <body>
-    <h2 style="text-align: center">Feedback Form</h2>
-    <form>
-      <label for="name">Name (optional):</label>
-      <input type="text" id="name" name="name" />
-      <label for="email">Email (optional):</label>
-      <input type="email" id="email" name="email" />
-      <label for="phone">Phone (optional):</label>
-      <input type="tel" id="phone" name="phone" />
-      <label for="ranking">Ranking:</label>
-      <select id="ranking" name="ranking" required>
-        <option value="5">Excellent</option>
-        <option value="4">Good</option>
-        <option value="3">Average</option>
-        <option value="2">Below Average</option>
-        <option value="1">Poor</option>
-      </select>
-      <label for="quesKons">Any QuesKons regarding product or service:</label>
-      <textarea id="quesKons" name="quesKons" rows="4" required></textarea>
-      <label for="comments">Additional Comments (optional):</label>
-      <textarea id="comments" name="comments" rows="3"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="name">Name (Optional):</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email (Optional):</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone (Optional):</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="questions">Questions regarding product/service:</label>
+            <textarea id="questions" name="questions" rows="4" placeholder="Enter your questions"></textarea>
+
+            <label for="comments">Additional Comments (Optional):</label>
+            <textarea id="comments" name="comments" rows="3" placeholder="Enter additional comments"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
 </html>
